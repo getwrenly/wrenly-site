@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FlowArt — irrigation design, from flow test to final quote | Wrenly</title>
+<meta name="description" content="Flow and pressure testing, site survey, hydraulic design, materials lists with part numbers, supplier ordering and quoting. FlowArt is the irrigation app for people who install what they design.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,100..900;1,62..125,100..900&family=Playfair+Display:wght@800&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2076%2076%22%3E%3Crect%20width%3D%2276%22%20height%3D%2276%22%20rx%3D%2216%22%20fill%3D%22%2313336C%22/%3E%3Cg%20transform%3D%22translate%286%2013%29%22%20fill%3D%22%23FBFAF6%22%3E%3Cpath%20d%3D%22M.2%204.8%208.2%200%2018.5%2026%2010.4%2029.5Z%22/%3E%3Cpath%20d%3D%22M11%2028c1-12%2015-22.7%2027-22.7s22.6%208.7%2022.6%2022.7-11.6%2022-25.6%2022S9.6%2040%2011%2028Z%22/%3E%3Cpath%20d%3D%22M55%2016.4%2064%2019.8l-7.6%203.6Z%22/%3E%3Ccircle%20cx%3D%2248.4%22%20cy%3D%2214.6%22%20r%3D%222.4%22%20fill%3D%22%2313336C%22/%3E%3C/g%3E%3Cg%20transform%3D%22translate%286%2013%29%22%20stroke%3D%22%232E7ED3%22%20stroke-width%3D%225.2%22%20stroke-linecap%3D%22round%22%20fill%3D%22none%22%3E%3Cpath%20d%3D%22M26.5%2025.2%2045.5%2021%22/%3E%3Cpath%20d%3D%22M25%2032.3%2041.5%2028.6%22/%3E%3Cpath%20d%3D%22M24.3%2039.3%2036.5%2036.3%22/%3E%3C/g%3E%3C/svg%3E">
+<style>
+/* ============================================================
+   WRENLY APP PAGE — FlowArt
+   Generated from landscape-mate.html, the reference page.
+   Only the accent tokens and the content differ.
+   ============================================================ */
+:root{
+  --ink:#0A1B3D;
+  --tier:#13336C;
+  --edge:rgba(251,250,246,.17);
+  --chalk:#FBFAF6;
+  --haze:#9BAECB;
+  --wren:#2E7ED3;
+  --wren-lift:#6FB2F6;
+  --accent:#22A7CE;
+  --accent-soft:#8AD6E8;
+  --pad:clamp(20px,5vw,64px);
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{
+  margin:0;background:var(--ink);color:var(--chalk);
+  font-family:"Archivo",system-ui,sans-serif;
+  font-variation-settings:"wdth" 100,"wght" 400;
+  font-size:clamp(16px,1.05vw,18px);line-height:1.55;-webkit-font-smoothing:antialiased;
+}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--accent-soft);outline-offset:3px;border-radius:2px}
+.wrap{max-width:1180px;margin:0 auto;padding-inline:var(--pad)}
+
+.bar{position:sticky;top:0;z-index:20;background:rgba(10,27,61,.9);backdrop-filter:blur(10px);border-bottom:1px solid var(--edge)}
+.bar .wrap{display:flex;align-items:center;justify-content:space-between;gap:20px;height:60px}
+.mark{display:flex;align-items:center;gap:9px;text-decoration:none}
+.mark .bird{display:block;flex:none}
+.word{font-family:"Playfair Display",Georgia,serif;font-weight:800;font-size:1.42rem;line-height:1;letter-spacing:-.005em;color:var(--chalk)}
+.word>span{color:var(--wren-lift)}
+.crumb{color:var(--haze);font-size:.92rem}
+.crumb b{color:var(--chalk);font-variation-settings:"wght" 600}
+.bar nav{display:flex;gap:20px;font-size:.9rem;color:var(--haze)}
+.bar nav a{text-decoration:none}
+.bar nav a:hover{color:var(--chalk)}
+.bar .back{display:none}
+
+/* hero */
+.hero{padding-block:clamp(44px,8vw,92px) clamp(36px,5vw,64px);position:relative;overflow:hidden}
+.hero::after{content:"";position:absolute;right:-14vw;top:-10vw;width:46vw;height:46vw;border-radius:50%;
+  background:radial-gradient(circle at 32% 32%,rgba(34,167,206,.26),transparent 62%);pointer-events:none}
+.hero .wrap{position:relative}
+.kicker{color:var(--accent-soft);font-size:.9rem;margin:0 0 14px}
+.kicker a{text-decoration:none}
+.kicker a:hover{text-decoration:underline}
+h1{margin:0;font-size:clamp(3rem,10vw,7rem);line-height:.86;letter-spacing:-.045em;
+   font-variation-settings:"wdth" 122,"wght" 780;text-wrap:balance}
+.tagline{margin:22px 0 0;font-size:clamp(1.1rem,2.2vw,1.42rem);max-width:30ch;
+   font-variation-settings:"wdth" 104,"wght" 450;line-height:1.35;color:var(--chalk)}
+.sub{margin:18px 0 0;max-width:56ch;color:var(--haze)}
+.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}
+.btn{display:inline-block;text-decoration:none;padding:14px 26px;border-radius:3px;
+  font-variation-settings:"wdth" 106,"wght" 620}
+.btn-a{background:var(--accent);color:#04202A}
+.btn-a:hover{background:var(--accent-soft)}
+.btn-b{border:1px solid var(--edge);color:var(--chalk)}
+.btn-b:hover{border-color:var(--chalk)}
+.spec{display:flex;flex-wrap:wrap;gap:10px 40px;margin-top:44px;padding-top:22px;border-top:1px solid var(--edge);color:var(--haze);font-size:.9rem}
+.spec b{color:var(--chalk);font-variation-settings:"wght" 600}
+
+.section{padding-block:clamp(46px,7vw,90px);border-top:1px solid var(--edge)}
+.shead{max-width:52ch;margin-bottom:36px}
+h2{margin:0;font-size:clamp(1.7rem,3.6vw,2.5rem);line-height:1.03;letter-spacing:-.03em;
+   font-variation-settings:"wdth" 114,"wght" 720}
+.shead p{margin:14px 0 0;color:var(--haze)}
+
+/* problem strip */
+.pain{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(18px,3vw,44px)}
+.pain div{border-top:2px solid var(--accent);padding-top:14px}
+.pain h3{margin:0 0 6px;font-size:1.02rem;font-variation-settings:"wdth" 108,"wght" 640}
+.pain p{margin:0;color:var(--haze);font-size:.94rem}
+
+/* modules */
+.mods{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.mod{background:var(--tier);border:1px solid var(--edge);border-radius:4px;padding:24px 22px;position:relative}
+.mod::before{content:"";position:absolute;inset:0 auto 0 0;width:3px;background:var(--accent)}
+.mod h3{margin:0 0 12px;font-size:1.2rem;font-variation-settings:"wdth" 110,"wght" 680;letter-spacing:-.02em}
+.mod ul{margin:0;padding:0;list-style:none;display:grid;gap:7px}
+.mod li{color:var(--haze);font-size:.93rem;padding-left:16px;position:relative;line-height:1.42}
+.mod li::before{content:"";position:absolute;left:0;top:.62em;width:6px;height:1px;background:var(--accent-soft)}
+
+/* deep dive */
+.dive{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:clamp(24px,5vw,64px);align-items:start}
+.steps{counter-reset:s;display:grid;gap:2px}
+.step{display:grid;grid-template-columns:auto minmax(0,1fr);gap:18px;padding:18px 0;border-top:1px solid var(--edge)}
+.step::before{counter-increment:s;content:counter(s,decimal-leading-zero);color:var(--accent-soft);
+  font-variation-settings:"wdth" 100,"wght" 600;font-size:.85rem;padding-top:3px}
+.step h3{margin:0 0 5px;font-size:1.06rem;font-variation-settings:"wdth" 106,"wght" 640}
+.step p{margin:0;color:var(--haze);font-size:.93rem}
+
+/* who */
+.who{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.who div{border:1px solid var(--edge);border-radius:4px;padding:20px}
+.who h3{margin:0 0 8px;font-size:1.02rem;font-variation-settings:"wght" 640}
+.who p{margin:0;color:var(--haze);font-size:.92rem}
+
+/* faq */
+details{border-top:1px solid var(--edge);padding:16px 0}
+details summary{cursor:pointer;font-variation-settings:"wdth" 106,"wght" 600;list-style:none;display:flex;justify-content:space-between;gap:20px}
+details summary::-webkit-details-marker{display:none}
+details summary::after{content:"+";color:var(--accent-soft);font-variation-settings:"wght" 500}
+details[open] summary::after{content:"–"}
+details p{margin:12px 0 0;color:var(--haze);max-width:70ch;font-size:.95rem}
+
+/* cta */
+.cta{background:var(--accent);color:#04202A}
+.cta .wrap{padding-block:clamp(44px,6vw,76px);display:grid;grid-template-columns:minmax(0,1fr) auto;gap:26px;align-items:center}
+.cta h2{color:#04202A;max-width:20ch}
+.cta p{margin:12px 0 0;color:rgba(4,32,42,.76);max-width:48ch}
+.cta .btn{background:#04202A;color:var(--chalk)}
+.cta .btn:hover{background:#13336C}
+
+/* more from wrenly */
+.more{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:8px}
+.more a{display:block;text-decoration:none;background:var(--tier);border:1px solid var(--edge);border-radius:4px;padding:18px 18px 16px;position:relative}
+.more a::before{content:"";position:absolute;inset:0 auto 0 0;width:3px;background:var(--c)}
+.more a:hover{border-color:rgba(251,250,246,.36)}
+.more strong{display:block;font-variation-settings:"wdth" 108,"wght" 640;font-size:1.05rem}
+.more small{color:var(--haze);font-size:.88rem}
+.allapps{display:inline-block;margin-top:22px;color:var(--accent-soft);text-decoration:none;font-variation-settings:"wght" 600;font-size:.95rem}
+.allapps:hover{text-decoration:underline}
+
+footer{border-top:1px solid var(--edge);padding-block:36px;font-size:.86rem;color:var(--haze)}
+footer .wrap{display:flex;flex-wrap:wrap;gap:16px 32px;justify-content:space-between}
+footer a{text-decoration:none}
+footer a:hover{color:var(--chalk)}
+
+@media (max-width:900px){
+  .crumb{display:none}
+  .bar .back{display:inline}
+  .pain,.who,.more,.mods{grid-template-columns:1fr}
+  .dive{grid-template-columns:1fr}
+  .cta .wrap{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<header class="bar">
+  <div class="wrap">
+    <a class="mark" href="index.html" aria-label="Wrenly, home">
+      <svg class="bird" width="34" height="26" viewBox="0 0 64 50" aria-hidden="true">
+        <g fill="var(--chalk)">
+          <path d="M.2 4.8 8.2 0 18.5 26 10.4 29.5Z"/>
+          <path d="M11 28c1-12 15-22.7 27-22.7s22.6 8.7 22.6 22.7-11.6 22-25.6 22S9.6 40 11 28Z"/>
+          <path d="M55 16.4 64 19.8l-7.6 3.6Z"/>
+        </g>
+        <circle cx="48.4" cy="14.6" r="2.4" fill="var(--ink)"/>
+        <g stroke="var(--wren-lift)" stroke-width="5.2" stroke-linecap="round" fill="none">
+          <path d="M26.5 25.2 45.5 21"/><path d="M25 32.3 41.5 28.6"/><path d="M24.3 39.3 36.5 36.3"/>
+        </g>
+      </svg>
+      <span class="word">wren<span>ly</span></span>
+    </a>
+    <span class="crumb">Apps / <b>FlowArt</b></span>
+    <nav>
+      <a href="#inside">What's inside</a>
+      <a href="#design-suite">The design suite</a>
+      <a class="back" href="index.html">All apps</a>
+      <a href="#access">Early access</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section class="hero">
+  <div class="wrap">
+    <p class="kicker"><a href="index.html">Wrenly</a> / on the tools</p>
+    <h1>FlowArt</h1>
+    <p class="tagline">Irrigation designed properly, before the first trench.</p>
+    <p class="sub">Test the water you've got, design the system it can actually run, and walk out with a parts list and a priced quote. Built by a grounds-care company that installs its own designs.</p>
+    <div class="actions">
+      <a class="btn btn-a" href="#access">Join early access</a>
+      <a class="btn btn-b" href="#inside">See what's inside</a>
+    </div>
+    <p class="spec">
+      <span><b>Hydraulics</b> checked before you dig</span>
+      <span><b>Part numbers</b> on every fitting</span>
+      <span><b>Booster pump</b> design for low-pressure sites</span>
+      <span><b>Australian</b> suppliers and brands</span>
+    </p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="shead">
+      <h2>The system was fine on paper</h2>
+      <p>Irrigation fails in three predictable places, and all three happen before anyone turns a tap on.</p>
+    </div>
+    <div class="pain">
+      <div>
+        <h3>Designed on a guess</h3>
+        <p>Zones drawn from experience, then patched with an extra solenoid after the client rings about the dry corner.</p>
+      </div>
+      <div>
+        <h3>Pressure that never arrives</h3>
+        <p>What is at the meter isn't what's at the last head. Nobody finds out until commissioning day.</p>
+      </div>
+      <div>
+        <h3>Short at the trench</h3>
+        <p>A fitting list built from memory, twelve elbows light, with the machine on hire and the crew standing around.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="inside">
+  <div class="wrap">
+    <div class="shead">
+      <h2>What's inside</h2>
+      <p>Six stages, in the order an irrigation job actually happens.</p>
+    </div>
+    <div class="mods">
+      <div class="mod">
+        <h3>Flow and pressure testing</h3>
+        <ul>
+          <li>Static and dynamic pressure at the point of connection</li>
+          <li>Flow rate at the meter, timed and recorded</li>
+          <li>Main size, length and material from the street</li>
+          <li>Available pressure and flow written to the job file</li>
+          <li>Existing system audit before you touch it</li>
+        </ul>
+      </div>
+      <div class="mod">
+        <h3>Measure and survey</h3>
+        <ul>
+          <li>Bed, lawn and hard surface areas</li>
+          <li>Slope and elevation change across the site</li>
+          <li>Wind exposure and orientation</li>
+          <li>Soil type and infiltration rate</li>
+          <li>Plant groupings and water demand</li>
+        </ul>
+      </div>
+      <div class="mod">
+        <h3>Services and assets</h3>
+        <ul>
+          <li>Water, sewer, storm, gas, electrical and telecoms</li>
+          <li>Existing valves, sleeves and conduits marked on the plan</li>
+          <li>Overhead and underground assets</li>
+          <li>Dial before you dig references attached to the job</li>
+          <li>Trench routes planned around what's already there</li>
+        </ul>
+      </div>
+      <div class="mod">
+        <h3>The design suite</h3>
+        <ul>
+          <li>Zoning by hydrozone and by available flow</li>
+          <li>Head layout, spacing and arc selection</li>
+          <li>Precipitation matching checked per zone</li>
+          <li>Pipe sizing run by run, with friction loss</li>
+          <li>Drip line design for beds and planters</li>
+          <li>Valve, controller and station schedule</li>
+        </ul>
+      </div>
+      <div class="mod">
+        <h3>Materials and ordering</h3>
+        <ul>
+          <li>Full parts list with descriptions and part numbers</li>
+          <li>Local supplier directory and pricing</li>
+          <li>Automated order list, ready to send</li>
+          <li>Van and shed inventory tracked against the job</li>
+          <li>Substitutes when a part is out of stock</li>
+        </ul>
+      </div>
+      <div class="mod">
+        <h3>Quoting and safety</h3>
+        <ul>
+          <li>Labour and materials priced into one quote</li>
+          <li>Trenching, excavation and traffic risk</li>
+          <li>SWMS for the job, ready to sign</li>
+          <li>Client-facing plan and zone schedule</li>
+          <li>Commissioning and handover checklist</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="design-suite">
+  <div class="wrap dive">
+    <div class="shead" style="margin:0">
+      <h2>Test the tap, draw the zones, let it size the system</h2>
+      <p>The design suite is the reason FlowArt exists. Five steps from a pressure gauge to a parts list you can order from.</p>
+      <a class="allapps" href="#access">Join early access</a>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <div><h3>Test what the site has</h3><p>Static pressure, dynamic pressure and timed flow at the point of connection. The app works out what this site can genuinely run, before anything is drawn.</p></div>
+      </div>
+      <div class="step">
+        <div><h3>Draw the areas</h3><p>Trace lawn, beds and planters on the site plan and group them into hydrozones by water demand, sun and soil.</p></div>
+      </div>
+      <div class="step">
+        <div><h3>Place the heads</h3><p>Choose the range you install and the app lays out head spacing and arcs, checking head-to-head coverage across every zone.</p></div>
+      </div>
+      <div class="step">
+        <div><h3>Let it size everything</h3><p>Pipe diameter run by run, precipitation match per zone, stations grouped inside the available flow — and a booster pump specification if the site comes up short.</p></div>
+      </div>
+      <div class="step">
+        <div><h3>Take the list and the price</h3><p>Every head, valve, fitting and metre of pipe with part numbers, straight into a supplier order and a priced quote.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="shead"><h2>Who it's built for</h2></div>
+    <div class="who">
+      <div><h3>Irrigation contractors</h3><p>Designing and installing residential and commercial systems, who need the hydraulics right the first time.</p></div>
+      <div><h3>Landscapers who install</h3><p>Putting irrigation in as part of a build, without wanting to sub it out or guess at it.</p></div>
+      <div><h3>Grounds and sportsfield crews</h3><p>Managing large areas where zoning and precipitation rate decide whether the turf survives summer.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="shead" style="max-width:60ch">
+      <h2>Built by people who dig the trench</h2>
+      <p>FlowArt comes out of Modern Outdoors, a working grounds-care business in New South Wales running an all-electric fleet. Every tool in the app exists because a job needed it, and it gets used on site before it ships.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="shead"><h2>Questions</h2></div>
+    <details><summary>Does it design drip as well as spray?</summary><p>Yes. Drip line spacing, emitter rate and run length are handled alongside spray and rotor zones, including mixed systems where beds are drip and lawn is spray.</p></details>
+    <details><summary>What if the site doesn't have enough pressure?</summary><p>The app tells you early, then designs around it — smaller zones, different nozzle selection, or a booster pump specified to the flow and head the design needs.</p></details>
+    <details><summary>Is it tied to one brand?</summary><p>No. Nozzle and head data covers the ranges commonly available in Australia, and you set which supplier and brand you work with. Part numbers come out matching what you actually order.</p></details>
+    <details><summary>Can I hand the design to the client?</summary><p>Yes. The plan, zone schedule and watering program export as a client document, separate from your costings and supplier pricing.</p></details>
+    <details><summary>When can I use it?</summary><p>FlowArt is in build. Early access opens to a limited group first, with pricing announced before anyone is charged.</p></details>
+  </div>
+</section>
+
+<section class="cta" id="access">
+  <div class="wrap">
+    <div>
+      <h2>Get FlowArt before it goes public</h2>
+      <p>Early access users set the order the modules ship in, and get the first release free for the trial period.</p>
+    </div>
+    <a class="btn" href="mailto:hello@wrenly.app?subject=FlowArt%20early%20access">Join early access</a>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="shead"><h2>More from Wrenly</h2></div>
+    <div class="more">
+      <a href="landscape-mate.html" style="--c:#1E9E8A"><strong>Landscape Mate</strong><small>The whole landscape job, site visit to handover.</small></a>
+      <a href="buildmate.html" style="--c:#E5A72B"><strong>BuildMate</strong><small>Every trade explained, with the calculators.</small></a>
+      <a href="compliance-hub.html" style="--c:#C4553C"><strong>Compliance Hub</strong><small>SWMS, SDS and risk assessments in one place.</small></a>
+    </div>
+    <a class="allapps" href="index.html">See all sixteen Wrenly apps</a>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>Wrenly — a SCHOFOX Pty Ltd studio. New South Wales, Australia.</span>
+    <span><a href="mailto:hello@wrenly.app">hello@wrenly.app</a> &nbsp; <a href="index.html">All apps</a></span>
+  </div>
+</footer>
+
+</body>
+</html>

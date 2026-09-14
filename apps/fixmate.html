@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FixMate — work out what's wrong, then fix it | Wrenly</title>
+<meta name="description" content="Plain-language repair guides for everything that breaks in a house, written for people with no trade experience — with a clear stop point telling you when to call a licensed trade.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,100..900;1,62..125,100..900&family=Playfair+Display:wght@800&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2076%2076%22%3E%3Crect%20width%3D%2276%22%20height%3D%2276%22%20rx%3D%2216%22%20fill%3D%22%2313336C%22/%3E%3Cg%20transform%3D%22translate%286%2013%29%22%20fill%3D%22%23FBFAF6%22%3E%3Cpath%20d%3D%22M.2%204.8%208.2%200%2018.5%2026%2010.4%2029.5Z%22/%3E%3Cpath%20d%3D%22M11%2028c1-12%2015-22.7%2027-22.7s22.6%208.7%2022.6%2022.7-11.6%2022-25.6%2022S9.6%2040%2011%2028Z%22/%3E%3Cpath%20d%3D%22M55%2016.4%2064%2019.8l-7.6%203.6Z%22/%3E%3Ccircle%20cx%3D%2248.4%22%20cy%3D%2214.6%22%20r%3D%222.4%22%20fill%3D%22%2313336C%22/%3E%3C/g%3E%3Cg%20transform%3D%22translate%286%2013%29%22%20stroke%3D%22%232E7ED3%22%20stroke-width%3D%225.2%22%20stroke-linecap%3D%22round%22%20fill%3D%22none%22%3E%3Cpath%20d%3D%22M26.5%2025.2%2045.5%2021%22/%3E%3Cpath%20d%3D%22M25%2032.3%2041.5%2028.6%22/%3E%3Cpath%20d%3D%22M24.3%2039.3%2036.5%2036.3%22/%3E%3C/g%3E%3C/svg%3E">
+<style>
+/* ============================================================
+   WRENLY APP PAGE — FixMate
+   Generated from landscape-mate.html, the reference page.
+   Only the accent tokens and the content differ.
+   ============================================================ */
+:root{
+  --ink:#0A1B3D;
+  --tier:#13336C;
+  --edge:rgba(251,250,246,.17);
+  --chalk:#FBFAF6;
+  --haze:#9BAECB;
+  --wren:#2E7ED3;
+  --wren-lift:#6FB2F6;
+  --accent:#E07B39;
+  --accent-soft:#F3BC8E;
+  --pad:clamp(20px,5vw,64px);
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{
+  margin:0;background:var(--ink);color:var(--chalk);
+  font-family:"Archivo",system-ui,sans-serif;
+  font-variation-settings:"wdth" 100,"wght" 400;
+  font-size:clamp(16px,1.05vw,18px);line-height:1.55;-webkit-font-smoothing:antialiased;
+}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--accent-soft);outline-offset:3px;border-radius:2px}
+.wrap{max-width:1180px;margin:0 auto;padding-inline:var(--pad)}
+
+.bar{position:sticky;top:0;z-index:20;background:rgba(10,27,61,.9);backdrop-filter:blur(10px);border-bottom:1px solid var(--edge)}
+.bar .wrap{display:flex;align-items:center;justify-content:space-between;gap:20px;height:60px}
+.mark{display:flex;align-items:center;gap:9px;text-decoration:none}
+.mark .bird{display:block;flex:none}
+.word{font-family:"Playfair Display",Georgia,serif;font-weight:800;font-size:1.42rem;line-height:1;letter-spacing:-.005em;color:var(--chalk)}
+.word>span{color:var(--wren-lift)}
+.crumb{color:var(--haze);font-size:.92rem}
+.crumb b{color:var(--chalk);font-variation-settings:"wght" 600}
+.bar nav{display:flex;gap:20px;font-size:.9rem;color:var(--haze)}
+.bar nav a{text-decoration:none}
+.bar nav a:hover{color:var(--chalk)}
+.bar .back{display:none}
+
+/* hero */
+.hero{padding-block:clamp(44px,8vw,92px) clamp(36px,5vw,64px);position:relative;overflow:hidden}
+.hero::after{content:"";position:absolute;right:-14vw;top:-10vw;width:46vw;height:46vw;border-radius:50%;
+  background:radial-gradient(circle at 32% 32%,rgba(224,123,57,.24),transparent 62%);pointer-events:none}
+.hero .wrap{position:relative}
+.kicker{color:var(--accent-soft);font-size:.9rem;margin:0 0 14px}
+.kicker a{text-decoration:none}
+.kicker a:hover{text-decoration:underline}
+h1{margin:0;font-size:clamp(3rem,10vw,7rem);line-height:.86;letter-spacing:-.045em;
+   font-variation-settings:"wdth" 122,"wght" 780;text-wrap:balance}
+.tagline{margin:22px 0 0;font-size:clamp(1.1rem,2.2vw,1.42rem);max-width:30ch;
+   font-variation-settings:"wdth" 104,"wght" 450;line-height:1.35;color:var(--chalk)}
+.sub{margin:18px 0 0;max-width:56ch;color:var(--haze)}
+.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}
+.btn{display:inline-block;text-decoration:none;padding:14px 26px;border-radius:3px;
+  font-variation-settings:"wdth" 106,"wght" 620}
+.btn-a{background:var(--accent);color:#2A1204}
+.btn-a:hover{background:var(--accent-soft)}
+.btn-b{border:1px solid var(--edge);color:var(--chalk)}
+.btn-b:hover{border-color:var(--chalk)}
+.spec{display:flex;flex-wrap:wrap;gap:10px 40px;margin-top:44px;padding-top:22px;border-top:1px solid var(--edge);color:var(--haze);font-size:.9rem}
+.spec b{color:var(--chalk);font-variation-settings:"wght" 600}
+
+.section{padding-block:clamp(46px,7vw,90px);border-top:1px solid var(--edge)}
+.shead{max-width:52ch;margin-bottom:36px}
+h2{margin:0;font-size:clamp(1.7rem,3.6vw,2.5rem);line-height:1.03;letter-spacing:-.03em;
+   font-variation-settings:"wdth" 114,"wght" 720}
+.shead p{margin:14px 0 0;color:var(--haze)}
+
+/* problem strip */
+.pain{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(18px,3vw,44px)}
+.pain div{border-top:2px solid var(--accent);padding-top:14px}
+.pain h3{margin:0 0 6px;font-size:1.02rem;font-variation-settings:"wdth" 108,"wght" 640}
+.pain p{margin:0;color:var(--haze);font-size:.94rem}
+
+/* modules */
+.mods{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.mod{background:var(--tier);border:1px solid var(--edge);border-radius:4px;padding:24px 22px;position:relative}
+.mod::before{content:"";position:absolute;inset:0 auto 0 0;width:3px;background:var(--accent)}
+.mod h3{margin:0 0 12px;font-size:1.2rem;font-variation-settings:"wdth" 110,"wght" 680;letter-spacing:-.02em}
+.mod ul{margin:0;padding:0;list-style:none;display:grid;gap:7px}
+.mod li{color:var(--haze);font-size:.93rem;padding-left:16px;position:relative;line-height:1.42}
+.mod li::before{content:"";position:absolute;left:0;top:.62em;width:6px;height:1px;background:var(--accent-soft)}
+
+/* deep dive */
+.dive{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:clamp(24px,5vw,64px);align-items:start}
+.steps{counter-reset:s;display:grid;gap:2px}
+.step{display:grid;grid-template-columns:auto minmax(0,1fr);gap:18px;padding:18px 0;border-top:1px solid var(--edge)}
+.step::before{counter-increment:s;content:counter(s,decimal-leading-zero);color:var(--accent-soft);
+  font-variation-settings:"wdth" 100,"wght" 600;font-size:.85rem;padding-top:3px}
+.step h3{margin:0 0 5px;font-size:1.06rem;font-variation-settings:"wdth" 106,"wght" 640}
+.step p{margin:0;color:var(--haze);font-size:.93rem}
+
+/* who */
+.who{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.who div{border:1px solid var(--edge);border-radius:4px;padding:20px}
+.who h3{margin:0 0 8px;font-size:1.02rem;font-variation-settings:"wght" 640}
+.who p{margin:0;color:var(--haze);font-size:.92rem}
+
+/* faq */
+details{border-top:1px solid var(--edge);padding:16px 0}
+details summary{cursor:pointer;font-variation-settings:"wdth" 106,"wght" 600;list-style:none;display:flex;justify-content:space-between;gap:20px}
+details summary::-webkit-details-marker{display:none}
+details summary::after{content:"+";color:var(--accent-soft);font-variation-settings:"wght" 500}
+details[open] summary::after{content:"–"}
+details p{margin:12px 0 0;color:var(--haze);max-width:70ch;font-size:.95rem}
+
+/* cta */
+.cta{background:var(--accent);color:#2A1204}
+.cta .wrap{padding-block:clamp(44px,6vw,76px);display:grid;grid-template-columns:minmax(0,1fr) auto;gap:26px;align-items:center}
+.cta h2{color:#2A1204;max-width:20ch}
+.cta p{margin:12px 0 0;color:rgba(42,18,4,.76);max-width:48ch}
+.cta .btn{background:#2A1204;color:var(--chalk)}
+.cta .btn:hover{background:#13336C}
+
+/* more from wrenly */
+.more{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:8px}
+.more a{display:block;text-decoration:none;background:var(--tier);border:1px solid var(--edge);border-radius:4px;padding:18px 18px 16px;position:relative}
+.more a::before{content:"";position:absolute;inset:0 auto 0 0;width:3px;background:var(--c)}
+.more a:hover{border-color:rgba(251,250,246,.36)}
+.more strong{display:block;font-variation-settings:"wdth" 108,"wght" 640;font-size:1.05rem}
+.more small{color:var(--haze);font-size:.88rem}
+.allapps{display:inline-block;margin-top:22px;color:var(--accent-soft);text-decoration:none;font-variation-settings:"wght" 600;font-size:.95rem}
+.allapps:hover{text-decoration:underline}
+
+footer{border-top:1px solid var(--edge);padding-block:36px;font-size:.86rem;color:var(--haze)}
+footer .wrap{display:flex;flex-wrap:wrap;gap:16px 32px;justify-content:space-between}
+footer a{text-decoration:none}
+footer a:hover{color:var(--chalk)}
+
+@media (max-width:900px){
+  .crumb{display:none}
+  .bar .back{display:inline}
+  .pain,.who,.more,.mods{grid-template-columns:1fr}
+  .dive{grid-template-columns:1fr}
+  .cta .wrap{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<header class="bar">
+  <div class="wrap">
+    <a class="mark" href="index.html" aria-label="Wrenly, home">
+      <svg class="bird" width="34" height="26" viewBox="0 0 64 50" aria-hidden="true">
+        <g fill="var(--chalk)">
+          <path d="M.2 4.8 8.2 0 18.5 26 10.4 29.5Z"/>
+          <path d="M11 28c1-12 15-22.7 27-22.7s22.6 8.7 22.6 22.7-11.6 22-25.6 22S9.6 40 11 28Z"/>
+          <path d="M55 16.4 64 19.8l-7.6 3.6Z"/>
+        </g>
+        <circle cx="48.4" cy="14.6" r="2.4" fill="var(--ink)"/>
+        <g stroke="var(--wren-lift)" stroke-width="5.2" stroke-linecap="round" fill="none">
+          <path d="M26.5 25.2 45.5 21"/><path d="M25 32.3 41.5 28.6"/><path d="M24.3 39.3 36.5 36.3"/>
+        </g>
+      </svg>
+      <span class="word">wren<span>ly</span></span>
+    </a>
+    <span class="crumb">Apps / <b>FixMate</b></span>
+    <nav>
+      <a href="#inside">What's inside</a>
+      <a href="#diagnose">How it works</a>
+      <a class="back" href="index.html">All apps</a>
+      <a href="#access">Early access</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section class="hero">
+  <div class="wrap">
+    <p class="kicker"><a href="index.html">Wrenly</a> / around the home</p>
+    <h1>FixMate</h1>
+    <p class="tagline">Work out what's wrong. Then fix it.</p>
+    <p class="sub">Describe the problem in your own words and get a straight answer: what it is, whether it's safe, whether it's yours to fix, and the steps with the tools you already own.</p>
+    <div class="actions">
+      <a class="btn btn-a" href="#access">Join early access</a>
+      <a class="btn btn-b" href="#inside">See what's inside</a>
+    </div>
+    <p class="spec">
+      <span><b>Nine</b> areas of the house</span>
+      <span><b>Three questions</b> to name the problem</span>
+      <span><b>A stop point</b> on every guide</span>
+      <span><b>No jargon</b>, and no assumed experience</span>
+    </p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="shead">
+      <h2>A callout fee for something that took eight minutes</h2>
+      <p>Most household repairs aren't difficult. They are just unfamiliar, and nobody was ever going to show you.</p>
+    </div>
+    <div class="pain">
+      <div>
+        <h3>You can't name the part</h3>
+        <p>Hard to search for a fix when you don't know the thing is called a cistern washer, or a spindle, or a P-trap.</p>
+      </div>
+      <div>
+        <h3>You don't know if it's dangerous</h3>
+        <p>Some of it's a five-minute job. Some of it will kill you. Nothing online tells you which one you're looking at.</p>
+      </div>
+      <div>
+        <h3>Paying for the obvious</h3>
+        <p>A tradesperson turns up, tightens something, charges the minimum callout, and leaves in ten minutes.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="inside">
+  <div class="wrap">
+    <div class="shead">
+      <h2>What's inside</h2>
+      <p>Nine parts of the house. Open the one the problem is in.</p>
+    </div>
+    <div class="mods">
+      <div class="mod">
+        <h3>Plumbing</h3>
+        <ul>
+          <li>Dripping taps and worn washers</li>
+          <li>Running or leaking toilets</li>
+          <li>Blocked sinks, showers and drains</li>
+          <li>Where your water isolation valves are</li>
+          <li>Low pressure and noisy pipes</li>
+          <li>What needs a licensed plumber, and why</li>
+        </ul>
+      </div>
+      <div class="mod">
+        <h3>Electrical, safe to know</h3>
+        <ul>
+          <li>Why the safety switch tripped and how to find the cause</li>
+          <li>Replacing globes, batteries and covers</li>
+          <li>Reading your switchboard</li>
+          <li>Extension leads, power boards and overload</li>
+          <li>What you must never open or touch</li>
+        </ul>
+      </div>
+      <div class="mod">
+        <h3>Doors, windows and locks</h3>
+        <ul>
+          <li>Doors that stick, drop or won't latch</li>
+          <li>Hinges, strikes and adjustment</li>
+          <li>Sliding door rollers and tracks</li>
+          <li>Flyscreens and security screens</li>
+          <li>Locks, handles and keys</li>
+        </ul>
+      </div>
+      <div class="mod">
+        <h3>Walls, ceilings and floors</h3>
+        <ul>
+          <li>Patching holes, cracks and dents</li>
+          <li>Hanging things that stay on the wall</li>
+          <li>Squeaking and lifting floorboards</li>
+          <li>Mould, damp and condensation</li>
+          <li>Skirting, cornice and trim</li>
+        </ul>
+      </div>
+      <div class="mod">
+        <h3>Appliances and comfort</h3>
+        <ul>
+          <li>Dishwashers that won't drain</li>
+          <li>Washing machines and dryers</li>
+          <li>Ovens, cooktops and rangehood filters</li>
+          <li>Fridge seals and drainage</li>
+          <li>Air conditioner filters and servicing</li>
+          <li>Heaters and ducted systems</li>
+        </ul>
+      </div>
+      <div class="mod">
+        <h3>Outside the house</h3>
+        <ul>
+          <li>Roof leaks, gutters and downpipes</li>
+          <li>Working at height, safely or not at all</li>
+          <li>Gates, fences and palings</li>
+          <li>Outdoor taps and hose fittings</li>
+          <li>Paths, steps and trip hazards</li>
+          <li>The tool kit worth owning, and what to hire</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="diagnose">
+  <div class="wrap dive">
+    <div class="shead" style="margin:0">
+      <h2>Say what's happening. The app works out the rest</h2>
+      <p>You don't need to know the name of anything to start. Five steps from a vague description to a finished repair, or an honest referral.</p>
+      <a class="allapps" href="#access">Join early access</a>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <div><h3>Describe it in your own words</h3><p>Water under the sink. Light flickers. Door won't shut. Whatever you would say to a friend on the phone is enough to start.</p></div>
+      </div>
+      <div class="step">
+        <div><h3>Answer three questions</h3><p>Short, specific questions that narrow it down — where, when, and what changed. No terminology, no diagrams to interpret.</p></div>
+      </div>
+      <div class="step">
+        <div><h3>Find out whose job it is</h3><p>The app tells you straight: this is a do-it-yourself repair, this needs a licensed trade, or this needs turning off and a phone call right now.</p></div>
+      </div>
+      <div class="step">
+        <div><h3>Follow the steps</h3><p>If it's yours, you get the sequence with the tools you already own, photographs of the actual parts, and what it should look like when it's right.</p></div>
+      </div>
+      <div class="step">
+        <div><h3>Know when to stop</h3><p>Every guide has a stop point. If you hit it, the app says so and tells you what to say when you ring the trade.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="shead"><h2>Who it's built for</h2></div>
+    <div class="who">
+      <div><h3>First home owners</h3><p>Suddenly responsible for a building, with nobody to ask and a list that keeps growing.</p></div>
+      <div><h3>Renters</h3><p>Who want to know what's theirs to fix, what the landlord must fix, and how to ask for it properly.</p></div>
+      <div><h3>Anyone never shown</h3><p>No trade behind you, no handy parent, no interest in pretending otherwise. The guides assume nothing.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="shead"><h2>Questions</h2></div>
+    <details><summary>Is it safe for me to do this myself?</summary><p>Every guide starts by answering that. FixMate separates repairs into what anyone can do, what needs care, and what's licensed work — and it won't walk you through licensed work no matter how you ask.</p></details>
+    <details><summary>Does it cover electrical?</summary><p>Only what's safe to know: resetting a tripped safety switch and finding what caused it, changing globes, understanding your switchboard. Anything behind a face plate is a licensed electrician, and the app says so.</p></details>
+    <details><summary>I am renting. What am I allowed to fix?</summary><p>The app explains the usual split between tenant and landlord responsibility in Australian tenancies, and helps you write the repair request when it's not yours to do.</p></details>
+    <details><summary>Do I need a shed full of tools?</summary><p>No. Guides are written around a basic kit, and each one lists what it needs up front — including when the sensible answer is to hire the tool for a day.</p></details>
+    <details><summary>When can I use it?</summary><p>FixMate is in build. Early access opens to a limited group first, with pricing announced before anyone is charged.</p></details>
+  </div>
+</section>
+
+<section class="cta" id="access">
+  <div class="wrap">
+    <div>
+      <h2>Get FixMate before it goes public</h2>
+      <p>Early access users tell us what broke this month, and those guides get written first.</p>
+    </div>
+    <a class="btn" href="mailto:hello@wrenly.app?subject=FixMate%20early%20access">Join early access</a>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="shead"><h2>More from Wrenly</h2></div>
+    <div class="more">
+      <a href="buildmate.html" style="--c:#E5A72B"><strong>BuildMate</strong><small>Every trade explained, with the calculators.</small></a>
+      <a href="cupboard-cook.html" style="--c:#C4433F"><strong>Cupboard Cook</strong><small>Tell it what's in the fridge. Get dinner.</small></a>
+      <a href="dadhq.html" style="--c:#7C58C4"><strong>DadHQ</strong><small>The household, run from Dad’s phone.</small></a>
+    </div>
+    <a class="allapps" href="index.html">See all sixteen Wrenly apps</a>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>Wrenly — a SCHOFOX Pty Ltd studio. New South Wales, Australia.</span>
+    <span><a href="mailto:hello@wrenly.app">hello@wrenly.app</a> &nbsp; <a href="index.html">All apps</a></span>
+  </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Landscape Mate — site tools and job management for landscapers | Wrenly</title>
+<meta name="description" content="Measure, set out, calculate, analyse the site, run the job and keep the client informed. Landscape Mate is the on-site app for landscape design and construction professionals.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,100..900;1,62..125,100..900&family=Playfair+Display:wght@800&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2076%2076%22%3E%3Crect%20width%3D%2276%22%20height%3D%2276%22%20rx%3D%2216%22%20fill%3D%22%2313336C%22/%3E%3Cg%20transform%3D%22translate%286%2013%29%22%20fill%3D%22%23FBFAF6%22%3E%3Cpath%20d%3D%22M.2%204.8%208.2%200%2018.5%2026%2010.4%2029.5Z%22/%3E%3Cpath%20d%3D%22M11%2028c1-12%2015-22.7%2027-22.7s22.6%208.7%2022.6%2022.7-11.6%2022-25.6%2022S9.6%2040%2011%2028Z%22/%3E%3Cpath%20d%3D%22M55%2016.4%2064%2019.8l-7.6%203.6Z%22/%3E%3Ccircle%20cx%3D%2248.4%22%20cy%3D%2214.6%22%20r%3D%222.4%22%20fill%3D%22%2313336C%22/%3E%3C/g%3E%3Cg%20transform%3D%22translate%286%2013%29%22%20stroke%3D%22%232E7ED3%22%20stroke-width%3D%225.2%22%20stroke-linecap%3D%22round%22%20fill%3D%22none%22%3E%3Cpath%20d%3D%22M26.5%2025.2%2045.5%2021%22/%3E%3Cpath%20d%3D%22M25%2032.3%2041.5%2028.6%22/%3E%3Cpath%20d%3D%22M24.3%2039.3%2036.5%2036.3%22/%3E%3C/g%3E%3C/svg%3E">
+<style>
+/* ============================================================
+   WRENLY APP PAGE — reference implementation
+   To clone for another app: change --accent / --accent-soft,
+   the page title, meta description, and the content blocks.
+   Everything else stays identical so every app page reads as
+   part of the same studio.
+   ============================================================ */
+:root{
+  --ink:#0A1B3D;
+  --tier:#13336C;
+  --edge:rgba(251,250,246,.17);
+  --chalk:#FBFAF6;
+  --haze:#9BAECB;
+  --wren:#2E7ED3;
+  --wren-lift:#6FB2F6;
+  --accent:#1E9E8A;          /* Landscape Mate teal */
+  --accent-soft:#8FD3C6;     /* pale blue-green from the LM monogram */
+  --pad:clamp(20px,5vw,64px);
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{
+  margin:0;background:var(--ink);color:var(--chalk);
+  font-family:"Archivo",system-ui,sans-serif;
+  font-variation-settings:"wdth" 100,"wght" 400;
+  font-size:clamp(16px,1.05vw,18px);line-height:1.55;-webkit-font-smoothing:antialiased;
+}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--accent-soft);outline-offset:3px;border-radius:2px}
+.wrap{max-width:1180px;margin:0 auto;padding-inline:var(--pad)}
+
+.bar{position:sticky;top:0;z-index:20;background:rgba(10,27,61,.9);backdrop-filter:blur(10px);border-bottom:1px solid var(--edge)}
+.bar .wrap{display:flex;align-items:center;justify-content:space-between;gap:20px;height:60px}
+.mark{display:flex;align-items:center;gap:9px;text-decoration:none}
+.mark .bird{display:block;flex:none}
+.word{font-family:"Playfair Display",Georgia,serif;font-weight:800;font-size:1.42rem;line-height:1;letter-spacing:-.005em;color:var(--chalk)}
+.word>span{color:var(--wren-lift)}
+.crumb{color:var(--haze);font-size:.92rem}
+.crumb b{color:var(--chalk);font-variation-settings:"wght" 600}
+.bar nav{display:flex;gap:20px;font-size:.9rem;color:var(--haze)}
+.bar nav a{text-decoration:none}
+.bar nav a:hover{color:var(--chalk)}
+.bar .back{display:none}
+
+/* hero */
+.hero{padding-block:clamp(44px,8vw,92px) clamp(36px,5vw,64px);position:relative;overflow:hidden}
+.hero::after{content:"";position:absolute;right:-14vw;top:-10vw;width:46vw;height:46vw;border-radius:50%;
+  background:radial-gradient(circle at 32% 32%,rgba(30,158,138,.28),transparent 62%);pointer-events:none}
+.hero .wrap{position:relative}
+.kicker{color:var(--accent-soft);font-size:.9rem;margin:0 0 14px}
+.kicker a{text-decoration:none}
+.kicker a:hover{text-decoration:underline}
+h1{margin:0;font-size:clamp(3rem,10vw,7rem);line-height:.86;letter-spacing:-.045em;
+   font-variation-settings:"wdth" 122,"wght" 780;text-wrap:balance}
+.tagline{margin:22px 0 0;font-size:clamp(1.1rem,2.2vw,1.42rem);max-width:30ch;
+   font-variation-settings:"wdth" 104,"wght" 450;line-height:1.35;color:var(--chalk)}
+.sub{margin:18px 0 0;max-width:56ch;color:var(--haze)}
+.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}
+.btn{display:inline-block;text-decoration:none;padding:14px 26px;border-radius:3px;
+  font-variation-settings:"wdth" 106,"wght" 620}
+.btn-a{background:var(--accent);color:#062019}
+.btn-a:hover{background:var(--accent-soft)}
+.btn-b{border:1px solid var(--edge);color:var(--chalk)}
+.btn-b:hover{border-color:var(--chalk)}
+.spec{display:flex;flex-wrap:wrap;gap:10px 40px;margin-top:44px;padding-top:22px;border-top:1px solid var(--edge);color:var(--haze);font-size:.9rem}
+.spec b{color:var(--chalk);font-variation-settings:"wght" 600}
+
+.section{padding-block:clamp(46px,7vw,90px);border-top:1px solid var(--edge)}
+.shead{max-width:52ch;margin-bottom:36px}
+h2{margin:0;font-size:clamp(1.7rem,3.6vw,2.5rem);line-height:1.03;letter-spacing:-.03em;
+   font-variation-settings:"wdth" 114,"wght" 720}
+.shead p{margin:14px 0 0;color:var(--haze)}
+
+/* problem strip */
+.pain{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(18px,3vw,44px)}
+.pain div{border-top:2px solid var(--accent);padding-top:14px}
+.pain h3{margin:0 0 6px;font-size:1.02rem;font-variation-settings:"wdth" 108,"wght" 640}
+.pain p{margin:0;color:var(--haze);font-size:.94rem}
+
+/* modules */
+.mods{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.mod{background:var(--tier);border:1px solid var(--edge);border-radius:4px;padding:24px 22px;position:relative}
+.mod::before{content:"";position:absolute;inset:0 auto 0 0;width:3px;background:var(--accent)}
+.mod h3{margin:0 0 12px;font-size:1.2rem;font-variation-settings:"wdth" 110,"wght" 680;letter-spacing:-.02em}
+.mod ul{margin:0;padding:0;list-style:none;display:grid;gap:7px}
+.mod li{color:var(--haze);font-size:.93rem;padding-left:16px;position:relative;line-height:1.42}
+.mod li::before{content:"";position:absolute;left:0;top:.62em;width:6px;height:1px;background:var(--accent-soft)}
+
+/* deep dive */
+.dive{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:clamp(24px,5vw,64px);align-items:start}
+.steps{counter-reset:s;display:grid;gap:2px}
+.step{display:grid;grid-template-columns:auto minmax(0,1fr);gap:18px;padding:18px 0;border-top:1px solid var(--edge)}
+.step::before{counter-increment:s;content:counter(s,decimal-leading-zero);color:var(--accent-soft);
+  font-variation-settings:"wdth" 100,"wght" 600;font-size:.85rem;padding-top:3px}
+.step h3{margin:0 0 5px;font-size:1.06rem;font-variation-settings:"wdth" 106,"wght" 640}
+.step p{margin:0;color:var(--haze);font-size:.93rem}
+
+/* who */
+.who{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.who div{border:1px solid var(--edge);border-radius:4px;padding:20px}
+.who h3{margin:0 0 8px;font-size:1.02rem;font-variation-settings:"wght" 640}
+.who p{margin:0;color:var(--haze);font-size:.92rem}
+
+/* faq */
+details{border-top:1px solid var(--edge);padding:16px 0}
+details summary{cursor:pointer;font-variation-settings:"wdth" 106,"wght" 600;list-style:none;display:flex;justify-content:space-between;gap:20px}
+details summary::-webkit-details-marker{display:none}
+details summary::after{content:"+";color:var(--accent-soft);font-variation-settings:"wght" 500}
+details[open] summary::after{content:"–"}
+details p{margin:12px 0 0;color:var(--haze);max-width:70ch;font-size:.95rem}
+
+/* cta */
+.cta{background:var(--accent);color:#062019}
+.cta .wrap{padding-block:clamp(44px,6vw,76px);display:grid;grid-template-columns:minmax(0,1fr) auto;gap:26px;align-items:center}
+.cta h2{color:#062019;max-width:20ch}
+.cta p{margin:12px 0 0;color:rgba(6,32,25,.78);max-width:48ch}
+.cta .btn{background:#062019;color:var(--chalk)}
+.cta .btn:hover{background:#13336C}
+
+/* more from wrenly */
+.more{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:8px}
+.more a{display:block;text-decoration:none;background:var(--tier);border:1px solid var(--edge);border-radius:4px;padding:18px 18px 16px;position:relative}
+.more a::before{content:"";position:absolute;inset:0 auto 0 0;width:3px;background:var(--c)}
+.more a:hover{border-color:rgba(251,250,246,.36)}
+.more strong{display:block;font-variation-settings:"wdth" 108,"wght" 640;font-size:1.05rem}
+.more small{color:var(--haze);font-size:.88rem}
+.allapps{display:inline-block;margin-top:22px;color:var(--accent-soft);text-decoration:none;font-variation-settings:"wght" 600;font-size:.95rem}
+.allapps:hover{text-decoration:underline}
+
+footer{border-top:1px solid var(--edge);padding-block:36px;font-size:.86rem;color:var(--haze)}
+footer .wrap{display:flex;flex-wrap:wrap;gap:16px 32px;justify-content:space-between}
+footer a{text-decoration:none}
+footer a:hover{color:var(--chalk)}
+
+@media (max-width:900px){
+  .crumb{display:none}
+  .bar .back{display:inline}
+  .pain,.who,.more,.mods{grid-template-columns:1fr}
+  .dive{grid-template-columns:1fr}
+  .cta .wrap{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<header class="bar">
+  <div class="wrap">
+    <a class="mark" href="index.html" aria-label="Wrenly, home">
+      <svg class="bird" width="34" height="26" viewBox="0 0 64 50" aria-hidden="true">
+        <g fill="var(--chalk)">
+          <path d="M.2 4.8 8.2 0 18.5 26 10.4 29.5Z"/>
+          <path d="M11 28c1-12 15-22.7 27-22.7s22.6 8.7 22.6 22.7-11.6 22-25.6 22S9.6 40 11 28Z"/>
+          <path d="M55 16.4 64 19.8l-7.6 3.6Z"/>
+        </g>
+        <circle cx="48.4" cy="14.6" r="2.4" fill="var(--ink)"/>
+        <g stroke="var(--wren-lift)" stroke-width="5.2" stroke-linecap="round" fill="none">
+          <path d="M26.5 25.2 45.5 21"/><path d="M25 32.3 41.5 28.6"/><path d="M24.3 39.3 36.5 36.3"/>
+        </g>
+      </svg>
+      <span class="word">wren<span>ly</span></span>
+    </a>
+    <span class="crumb">Apps / <b>Landscape Mate</b></span>
+    <nav>
+      <a href="#inside">What's inside</a>
+      <a href="#site-analysis">Site analysis</a>
+      <a class="back" href="index.html">All apps</a>
+      <a href="#access">Early access</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section class="hero">
+  <div class="wrap">
+    <p class="kicker"><a href="index.html">Wrenly</a> / on the tools</p>
+    <h1>Landscape Mate</h1>
+    <p class="tagline">The whole job, from first site visit to handover, in one app you can use with dirty hands.</p>
+    <p class="sub">Measuring tools, material calculators, soil and shade analysis, council requirements, supplier pricing, job programming and a client portal — built to the standards a design and construct business is already held to.</p>
+    <div class="actions">
+      <a class="btn btn-a" href="#access">Join early access</a>
+      <a class="btn btn-b" href="#inside">See what's inside</a>
+    </div>
+    <p class="spec">
+      <span><b>17</b> on-site tools</span>
+      <span><b>Council-aware</b> DCP, tree and fence rules by job address</span>
+      <span><b>Client portal</b> included</span>
+      <span><b>Australian</b> standards and suppliers</span>
+    </p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="shead">
+      <h2>Three trips back to the ute for one measurement</h2>
+      <p>Most landscape jobs lose money in the gaps: the set-out that was 40mm out, the order that came up short, the client who found out about the delay from the neighbour.</p>
+    </div>
+    <div class="pain">
+      <div>
+        <h3>Numbers done twice</h3>
+        <p>Areas, volumes, bulking factors and paver counts scribbled on the back of a plan, then redone at the supplier.</p>
+      </div>
+      <div>
+        <h3>Rules you find out late</h3>
+        <p>Fence heights, protected trees, frontage setbacks — different in every council, and usually checked after the quote.</p>
+      </div>
+      <div>
+        <h3>Clients in the dark</h3>
+        <p>Progress payments, plan approvals and delays chased by text message, with nothing written down anywhere.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="inside">
+  <div class="wrap">
+    <div class="shead">
+      <h2>What's inside</h2>
+      <p>Six groups of tools. Open the one that matches what you're standing in front of.</p>
+    </div>
+    <div class="mods">
+      <div class="mod">
+        <h3>On-site measuring and set-out</h3>
+        <ul>
+          <li>Angle finder, levels and heights</li>
+          <li>Perimeter, area and volume</li>
+          <li>Set-out tool with the 3-4-5 square check</li>
+          <li>Bulking factor and bulk density</li>
+          <li>Material calculators — bricks and pavers per m², base depths, mixes</li>
+        </ul>
+      </div>
+      <div class="mod">
+        <h3>Materials and specifications</h3>
+        <ul>
+          <li>Right material for the setting — treated pine grades, durability classes</li>
+          <li>Engineering specs library for common landscape structures</li>
+          <li>Local supplier directory with price lists</li>
+          <li>Specialist suppliers: concrete, sandstone, brick, turf, metal, fencing</li>
+          <li>Wholesale nursery directory and stock pricing</li>
+          <li>Equipment hire catalogue and day rates</li>
+        </ul>
+      </div>
+      <div class="mod">
+        <h3>Council and compliance</h3>
+        <ul>
+          <li>DCP pathway resolved to the job's own council</li>
+          <li>Exempt and protected tree lists</li>
+          <li>Fence heights and frontage rules for the address</li>
+          <li>Environmental management plan</li>
+          <li>Work health and safety section with site-specific assessments</li>
+        </ul>
+      </div>
+      <div class="mod">
+        <h3>Site analysis</h3>
+        <ul>
+          <li>Camera tree measurement — height, canopy, DBH, species</li>
+          <li>Step-by-step soil analysis with amendment plan</li>
+          <li>Sun path and shade mapping from your phone</li>
+          <li>Tree schedule, location map and neighbouring trees</li>
+          <li>Service plans, boundaries and existing structures</li>
+        </ul>
+      </div>
+      <div class="mod">
+        <h3>Running the job</h3>
+        <ul>
+          <li>Job program with milestones and crew allocation</li>
+          <li>Site plan upload and document portal</li>
+          <li>Site set-up plan: fencing, storage, access, exclusion zones, TPZs</li>
+          <li>Demolition plan, washout points and silt protection</li>
+          <li>Job journal with photos against every stage</li>
+        </ul>
+      </div>
+      <div class="mod">
+        <h3>The client side</h3>
+        <ul>
+          <li>Client portal with brief, site info and lifestyle questionnaire</li>
+          <li>Concept plan presentation</li>
+          <li>Automatic milestone notifications and progress payment requests</li>
+          <li>Documents to sign, tracked</li>
+          <li>Direct chat, handover pack and aftercare schedule</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="site-analysis">
+  <div class="wrap dive">
+    <div class="shead" style="margin:0">
+      <h2>A site analysis you can do in an hour, with a phone</h2>
+      <p>The part most quotes skip, done properly — and it writes itself into the concept plan, the material list and the client report.</p>
+      <a class="allapps" href="#access">Join early access</a>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <div><h3>Point the camera at the tree</h3><p>Returns height, canopy spread and shape, trunk diameter and circumference at breast height, plus botanical and common name.</p></div>
+      </div>
+      <div class="step">
+        <div><h3>Answer the soil questions</h3><p>A guided bolus and slurry test walks you through structure, profile and type, dispersive or not, and pH — then gives you the amendment steps for this site.</p></div>
+      </div>
+      <div class="step">
+        <div><h3>Set north and sweep the site</h3><p>Summer and winter sun paths are drawn against the shading objects you capture, producing a shade map for this address.</p></div>
+      </div>
+      <div class="step">
+        <div><h3>Mark the services</h3><p>Water, sewer, storm and grey water, gas, electricity, telecoms — overhead and underground, on one plan with your boundaries.</p></div>
+      </div>
+      <div class="step">
+        <div><h3>Export the report</h3><p>One document for the client, one for the crew, and a materials position you can quote from with confidence.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="shead"><h2>Who it's built for</h2></div>
+    <div class="who">
+      <div><h3>Design and construct businesses</h3><p>Running several jobs at once, with clients who expect drawings, documents and updates on time.</p></div>
+      <div><h3>Landscape designers</h3><p>Who need defensible site analysis and council positions before a concept goes out the door.</p></div>
+      <div><h3>Construction crews</h3><p>Who want the set-out, the specs and the material quantities in the same place as the program.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="shead"><h2>Questions</h2></div>
+    <details><summary>Does it work without signal on site?</summary><p>The measuring, set-out and calculator tools work offline. Supplier pricing, council data and client notifications sync when you're back in range.</p></details>
+    <details><summary>Which councils are covered?</summary><p>New South Wales metropolitan and surrounding councils at launch, with the rest of Australia rolled out by state. The DCP pathway resolves from the job address, so you get the right document, not a general one.</p></details>
+    <details><summary>Can my clients see everything?</summary><p>No. You choose what's published to the portal — brief, concept, documents, milestones and payment requests. Your costings, supplier pricing and internal notes stay on your side.</p></details>
+    <details><summary>Do I need to move off my current job software?</summary><p>No. Plenty of businesses will use Landscape Mate for the site and design work and keep invoicing where it is. Exports are plain files, not a lock-in.</p></details>
+    <details><summary>When can I use it?</summary><p>Landscape Mate is in build. Early access opens to a limited group first, with pricing announced before anyone is charged.</p></details>
+  </div>
+</section>
+
+<section class="cta" id="access">
+  <div class="wrap">
+    <div>
+      <h2>Get Landscape Mate before it goes public</h2>
+      <p>Early access users help set the module order and get the first release free for the trial period.</p>
+    </div>
+    <a class="btn" href="mailto:hello@wrenly.app?subject=Landscape%20Mate%20early%20access">Join early access</a>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="shead"><h2>More from Wrenly</h2></div>
+    <div class="more">
+      <a href="flowart.html" style="--c:#22A7CE"><strong>FlowArt</strong><small>Irrigation from flow test to final quote.</small></a>
+      <a href="buildmate.html" style="--c:#E5A72B"><strong>BuildMate</strong><small>Every trade explained, with the calculators.</small></a>
+      <a href="compliance-hub.html" style="--c:#C4553C"><strong>Compliance Hub</strong><small>SWMS, SDS and risk assessments in one place.</small></a>
+    </div>
+    <a class="allapps" href="index.html">See all sixteen Wrenly apps</a>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>Wrenly — a SCHOFOX Pty Ltd studio. New South Wales, Australia.</span>
+    <span><a href="mailto:hello@wrenly.app">hello@wrenly.app</a> &nbsp; <a href="index.html">All apps</a></span>
+  </div>
+</footer>
+
+</body>
+</html>
