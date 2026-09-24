@@ -349,8 +349,8 @@ footer a:hover{color:var(--chalk)}
 </footer>
 
 <script>
-/* Sign-ups go to the Cloudflare Pages Function in functions/api/modone-signup.js */
-const FORM_ENDPOINT = "/api/modone-signup";
+/* Sign-ups go to Formspree and are emailed to you */
+const FORM_ENDPOINT = "https://formspree.io/f/xaenjryq";
 
 document.querySelectorAll("form.signup").forEach(form => {
   form.addEventListener("submit", async e => {
