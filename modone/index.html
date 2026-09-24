@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Be first to book with MOD One — getWrenly</title>
+<meta name="description" content="MOD One is the new booking app from Modern Outdoors. Join the Priority List for first access to the booking calendar. Homeowners across the Hills and Hawkesbury.">
+<meta property="og:title" content="Be first to book with MOD One">
+<meta property="og:description" content="The new booking app from Modern Outdoors. Join the Priority List for first access to the booking calendar.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://getwrenly.app/modone">
+<meta name="theme-color" content="#0A1B3D">
+<link rel="canonical" href="https://getwrenly.app/modone">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,100..900;1,62..125,100..900&family=Playfair+Display:wght@800&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2076%2076%22%3E%3Crect%20width%3D%2276%22%20height%3D%2276%22%20rx%3D%2216%22%20fill%3D%22%2313336C%22/%3E%3Cg%20transform%3D%22translate%286%2013%29%22%20fill%3D%22%23FBFAF6%22%3E%3Cpath%20d%3D%22M.2%204.8%208.2%200%2018.5%2026%2010.4%2029.5Z%22/%3E%3Cpath%20d%3D%22M11%2028c1-12%2015-22.7%2027-22.7s22.6%208.7%2022.6%2022.7-11.6%2022-25.6%2022S9.6%2040%2011%2028Z%22/%3E%3Cpath%20d%3D%22M55%2016.4%2064%2019.8l-7.6%203.6Z%22/%3E%3Ccircle%20cx%3D%2248.4%22%20cy%3D%2214.6%22%20r%3D%222.4%22%20fill%3D%22%2313336C%22/%3E%3C/g%3E%3Cg%20transform%3D%22translate%286%2013%29%22%20stroke%3D%22%232E7ED3%22%20stroke-width%3D%225.2%22%20stroke-linecap%3D%22round%22%20fill%3D%22none%22%3E%3Cpath%20d%3D%22M26.5%2025.2%2045.5%2021%22/%3E%3Cpath%20d%3D%22M25%2032.3%2041.5%2028.6%22/%3E%3Cpath%20d%3D%22M24.3%2039.3%2036.5%2036.3%22/%3E%3C/g%3E%3C/svg%3E">
+<style>
+:root{
+  --ink:#0A1B3D;
+  --tier:#13336C;
+  --edge:rgba(251,250,246,.17);
+  --chalk:#FBFAF6;
+  --haze:#9BAECB;
+  --wren:#2E7ED3;
+  --wren-lift:#6FB2F6;
+  --accent:#1B4C86;
+  --accent-soft:#7FA6D6;
+  --pad:clamp(20px,5vw,64px);
+  --measure:62ch;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-padding-top:72px}
+body{
+  margin:0;background:var(--ink);color:var(--chalk);
+  font-family:"Archivo",system-ui,sans-serif;
+  font-variation-settings:"wdth" 100,"wght" 400;
+  font-size:clamp(16px,1.05vw,18px);line-height:1.55;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--accent-soft);outline-offset:3px;border-radius:2px}
+.wrap{max-width:1180px;margin:0 auto;padding-inline:var(--pad)}
+
+/* ---- top bar ---- */
+.bar{position:sticky;top:0;z-index:20;background:rgba(10,27,61,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--edge)}
+.bar .wrap{display:flex;align-items:center;justify-content:space-between;gap:24px;height:60px}
+.left{display:flex;align-items:center;gap:18px;min-width:0}
+.mark{display:flex;align-items:center;gap:9px;text-decoration:none;flex:none}
+.mark .bird{display:block;flex:none}
+.word{font-family:"Playfair Display",Georgia,serif;font-weight:800;font-size:1.42rem;line-height:1;letter-spacing:-.005em;color:var(--chalk)}
+.word>span{color:var(--wren-lift)}
+.crumb{font-size:.86rem;color:var(--haze);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.crumb a{text-decoration:none}
+.crumb a:hover{color:var(--chalk)}
+.bar nav{display:flex;gap:22px;font-size:.92rem;color:var(--haze)}
+.bar nav a{text-decoration:none}
+.bar nav a:hover{color:var(--chalk)}
+
+/* ---- type ---- */
+h1{
+  margin:0;font-size:clamp(2.6rem,6.6vw,4.6rem);line-height:.94;
+  font-variation-settings:"wdth" 118,"wght" 760;letter-spacing:-.04em;text-wrap:balance;
+}
+h1 span{color:var(--accent-soft)}
+h2{margin:0;font-size:clamp(1.6rem,3.4vw,2.3rem);font-variation-settings:"wdth" 116,"wght" 720;letter-spacing:-.035em;line-height:1.05;text-wrap:balance}
+h3{margin:0;font-size:1.18rem;font-variation-settings:"wdth" 108,"wght" 660;letter-spacing:-.02em;line-height:1.2}
+p{max-width:var(--measure)}
+
+/* ---- hero ---- */
+.hero{position:relative;overflow:hidden;padding-block:clamp(40px,8vw,96px) clamp(40px,6vw,72px)}
+.hero::before{content:"";position:absolute;inset:-30% -10% auto auto;width:70vw;height:70vw;max-width:900px;max-height:900px;
+  background:radial-gradient(closest-side,rgba(27,76,134,.55),transparent);pointer-events:none}
+.hero-grid{position:relative;display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:clamp(28px,5vw,72px);align-items:start}
+.kicker{margin:0 0 18px;font-size:.95rem;color:var(--accent-soft);font-variation-settings:"wdth" 104,"wght" 560}
+.lede{max-width:46ch;margin:24px 0 0;color:var(--haze);font-size:1.08rem}
+.spec{margin:34px 0 0;padding:0;list-style:none;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 24px;max-width:520px}
+.spec li{padding:11px 0;border-top:1px solid var(--edge);font-size:.93rem}
+.spec b{display:block;font-variation-settings:"wdth" 106,"wght" 620}
+.spec span{color:var(--haze)}
+
+/* ---- panels ---- */
+.panel{position:relative;background:var(--tier);border:1px solid var(--edge);border-radius:4px;padding:24px 22px 22px;overflow:hidden}
+.panel::before{content:"";position:absolute;inset:0 auto 0 0;width:3px;background:var(--accent-soft)}
+.panel p{margin:8px 0 0;color:var(--haze);font-size:.95rem}
+
+/* ---- form ---- */
+.form h2{font-size:1.5rem}
+.form .sub{margin:6px 0 4px;color:var(--haze);font-size:.93rem}
+label{display:block;margin:14px 0 6px;font-size:.9rem;font-variation-settings:"wdth" 104,"wght" 600}
+input{
+  width:100%;font:inherit;font-size:16px;color:var(--chalk);
+  background:rgba(10,27,61,.55);border:1px solid var(--edge);border-radius:4px;padding:12px 14px;
+}
+input::placeholder{color:#6F82A3}
+input:focus{outline:none;border-color:var(--accent-soft);box-shadow:0 0 0 2px rgba(127,166,214,.35)}
+.btn{
+  display:block;width:100%;margin-top:18px;padding:14px 22px;border:0;border-radius:3px;cursor:pointer;
+  background:var(--accent);color:var(--chalk);font:inherit;font-variation-settings:"wdth" 106,"wght" 640;font-size:1.02rem;
+  box-shadow:inset 0 0 0 1px rgba(127,166,214,.45);
+}
+.btn:hover{background:#225A9C}
+.btn[disabled]{opacity:.7;cursor:wait}
+.fine{margin:12px 0 0 !important;font-size:.84rem !important;color:var(--haze)}
+.hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+.err{display:none;margin:10px 0 0 !important;color:#F4A29D !important;font-size:.9rem !important}
+.thanks{display:none}
+.thanks h3{font-size:1.4rem;margin-top:4px}
+form.done .fields{display:none}
+form.done .thanks{display:block}
+
+/* ---- sections ---- */
+.section{padding-block:clamp(44px,7vw,88px);border-top:1px solid var(--edge)}
+.shead{display:flex;flex-wrap:wrap;gap:14px 28px;align-items:flex-end;justify-content:space-between;margin-bottom:34px}
+.shead p{margin:0;max-width:38ch;color:var(--haze);font-size:.95rem}
+.cols{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.two{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.big{font-size:clamp(2.6rem,5vw,3.6rem);line-height:1;font-variation-settings:"wdth" 120,"wght" 780;letter-spacing:-.04em;color:var(--accent-soft);margin-bottom:12px}
+.soon{display:inline-block;margin-bottom:12px;font-size:.84rem;color:var(--accent-soft);border:1px solid rgba(127,166,214,.45);border-radius:999px;padding:3px 12px}
+.price .amt{margin-top:2px;font-size:2.4rem;line-height:1;font-variation-settings:"wdth" 118,"wght" 760;letter-spacing:-.035em}
+.price .amt small{font-size:1rem;color:var(--haze);font-variation-settings:"wdth" 100,"wght" 500;letter-spacing:0}
+.price .from{font-size:.86rem;color:var(--haze);margin-top:10px;min-height:1.3em}
+.note{margin:18px 0 0;color:var(--haze);font-size:.95rem}
+
+/* ---- questions ---- */
+.qa{max-width:760px;border-top:1px solid var(--edge)}
+details{border-bottom:1px solid var(--edge)}
+summary{
+  cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:16px;padding:16px 4px;
+  font-variation-settings:"wdth" 106,"wght" 600;font-size:1.05rem;
+}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";color:var(--accent-soft);font-size:1.3rem;line-height:1}
+details[open] summary::after{content:"\2013"}
+details p{margin:0;padding:0 4px 18px;color:var(--haze)}
+
+/* ---- call to action band ---- */
+.band{background:var(--accent)}
+.band .wrap{padding-block:clamp(44px,6vw,72px);display:grid;grid-template-columns:minmax(0,1fr) minmax(0,.9fr);gap:clamp(28px,5vw,64px);align-items:center}
+.band p.lead{margin:12px 0 0;color:#D5E2F2}
+.band .panel{background:var(--ink)}
+
+/* ---- more ---- */
+.more{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.app{position:relative;display:flex;flex-direction:column;gap:8px;background:var(--tier);border:1px solid var(--edge);border-radius:4px;padding:22px 20px 20px;text-decoration:none;overflow:hidden}
+.app::before{content:"";position:absolute;inset:0 auto 0 0;width:3px;background:var(--c)}
+.app:hover{border-color:rgba(251,250,246,.36)}
+.app p{margin:0;color:var(--haze);font-size:.93rem}
+.app .go{margin-top:auto;padding-top:10px;font-size:.88rem;color:var(--wren-lift);font-variation-settings:"wght" 600}
+.all{display:inline-block;margin-top:22px;color:var(--wren-lift);text-decoration:none;font-variation-settings:"wght" 600}
+.all:hover{text-decoration:underline}
+
+footer{border-top:1px solid var(--edge);padding-block:26px;font-size:.88rem;color:var(--haze)}
+footer .wrap{display:flex;flex-wrap:wrap;gap:10px 24px;justify-content:space-between}
+footer a{text-decoration:none}
+footer a:hover{color:var(--chalk)}
+
+@media (max-width:900px){
+  .hero-grid,.band .wrap{grid-template-columns:1fr}
+  .cols,.more{grid-template-columns:1fr}
+  .two{grid-template-columns:1fr}
+  .bar nav{display:none}
+  .spec{display:none}
+}
+@media (max-width:520px){
+  .crumb{display:none}
+  .spec{grid-template-columns:1fr}
+}
+@media (prefers-reduced-motion:reduce){*{scroll-behavior:auto !important;transition:none !important}}
+</style>
+</head>
+<body>
+
+<header class="bar">
+  <div class="wrap">
+    <div class="left">
+      <a class="mark" href="/" aria-label="getWrenly, home">
+        <svg class="bird" width="34" height="26" viewBox="0 0 64 50" aria-hidden="true">
+          <g fill="var(--chalk)">
+            <path d="M.2 4.8 8.2 0 18.5 26 10.4 29.5Z"/>
+            <path d="M11 28c1-12 15-22.7 27-22.7s22.6 8.7 22.6 22.7-11.6 22-25.6 22S9.6 40 11 28Z"/>
+            <path d="M55 16.4 64 19.8l-7.6 3.6Z"/>
+          </g>
+          <circle cx="48.4" cy="14.6" r="2.4" fill="var(--ink)"/>
+          <g stroke="var(--wren-lift)" stroke-width="5.2" stroke-linecap="round" fill="none">
+            <path d="M26.5 25.2 45.5 21"/><path d="M25 32.3 41.5 28.6"/><path d="M24.3 39.3 36.5 36.3"/>
+          </g>
+        </svg>
+        <span class="word">wren<span>ly</span></span>
+      </a>
+      <span class="crumb"><a href="/">getWrenly</a> / on the tools</span>
+    </div>
+    <nav aria-label="On this page">
+      <a href="#inside">What you get</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#questions">Questions</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <p class="kicker">MOD One by Modern Outdoors</p>
+      <h1>Be first to book with <span>MOD One.</span></h1>
+      <p class="lede">MOD One is the new booking app from Modern Outdoors. It covers everything from booking to the finished job. Join the Priority List and get first access to the booking calendar when it opens.</p>
+      <ul class="spec">
+        <li><b>Book in the app</b><span>No waiting for a call back</span></li>
+        <li><b>Follow every job</b><span>From booking to finished</span></li>
+        <li><b>Hills and Hawkesbury</b><span>Homeowners across both districts</span></li>
+        <li><b>Seven years running</b><span>Best Commercial Gardens winner</span></li>
+      </ul>
+    </div>
+
+    <div class="panel form" id="join">
+      <form class="signup" novalidate>
+        <div class="fields">
+          <h2>Join the Priority List</h2>
+          <p class="sub">Free to join. Takes about 20 seconds.</p>
+          <label for="n1">First name</label>
+          <input id="n1" name="first_name" autocomplete="given-name" required>
+          <label for="m1">Mobile</label>
+          <input id="m1" name="mobile" type="tel" inputmode="tel" autocomplete="tel" placeholder="04xx xxx xxx" required>
+          <label for="s1">Suburb</label>
+          <input id="s1" name="suburb" autocomplete="address-level2" required>
+          <div class="hp" aria-hidden="true"><label>Leave blank<input name="company" tabindex="-1" autocomplete="off"></label></div>
+          <input type="hidden" name="source" value="modone-hero">
+          <button class="btn" type="submit">Add me to the Priority List</button>
+          <p class="err" role="alert"></p>
+          <p class="fine">We'll only contact you about MOD One, and you can opt out any time.</p>
+        </div>
+        <div class="thanks" aria-live="polite">
+          <h3>Thanks<span class="who"></span>, you're on the list.</h3>
+          <p>We'll text you as soon as MOD One is live so you can get first pick of the calendar.</p>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="inside">
+  <div class="wrap">
+    <div class="shead">
+      <h2>Garden care without the phone tag.</h2>
+      <p>What changes when you book with MOD One.</p>
+    </div>
+    <div class="cols">
+      <div class="panel"><h3>Book when it suits you</h3><p>Choose your service and time in the app, without waiting for a call back.</p></div>
+      <div class="panel"><h3>See every job through</h3><p>Follow each booking all the way to the finished job.</p></div>
+      <div class="panel"><h3>The same crew you trust</h3><p>It's still Modern Outdoors doing the work, now with an easier way to book us.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="why">
+  <div class="wrap">
+    <div class="shead"><h2>Why Modern Outdoors</h2></div>
+    <div class="two">
+      <div class="panel">
+        <div class="big">7 years</div>
+        <h3>Best Commercial Gardens winner</h3>
+        <p>The Sydney Hills Garden Competition, every year from 2019 to 2025.</p>
+      </div>
+      <div class="panel">
+        <span class="soon">Coming soon</span>
+        <h3>And there's something quieter on the way.</h3>
+        <p>We're about to change how we power every job, with quieter equipment and cleaner mornings for your street. We'll share more soon, and Priority List members will hear first.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="pricing">
+  <div class="wrap">
+    <div class="shead">
+      <h2>Simple, upfront pricing</h2>
+      <p>Hourly rates for homeowners across the Hills and Hawkesbury.</p>
+    </div>
+    <div class="cols">
+      <div class="panel price"><h3>Lawns &amp; gardening</h3><div class="from">From</div><div class="amt">$85<small>/hr</small></div></div>
+      <div class="panel price"><h3>Hedging</h3><div class="from"></div><div class="amt">$110<small>/hr</small></div></div>
+      <div class="panel price"><h3>Ride-on mowing</h3><div class="from"></div><div class="amt">$140<small>/hr</small></div></div>
+    </div>
+    <p class="note">These are the same rates whether you book through the app or with us directly.</p>
+  </div>
+</section>
+
+<section class="section" id="questions">
+  <div class="wrap">
+    <div class="shead"><h2>Quick answers</h2></div>
+    <div class="qa">
+      <details><summary>Where do you work?</summary><p>We look after homeowners across the Hills and Hawkesbury districts.</p></details>
+      <details><summary>I'm already a client. Should I join?</summary><p>Yes. Joining means you'll get first access to the app calendar when it opens.</p></details>
+      <details><summary>When does MOD One launch?</summary><p>Soon. The Priority List hears first, by text, as soon as it's live.</p></details>
+      <details><summary>Is there a catch?</summary><p>No. Joining is free, and it just puts you first in line to book.</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="band" id="priority">
+  <div class="wrap">
+    <div>
+      <h2>Be first in line when MOD One opens.</h2>
+      <p class="lead">Serving homeowners across the Hills and Hawkesbury.</p>
+    </div>
+    <div class="panel form">
+      <form class="signup" novalidate>
+        <div class="fields">
+          <label for="n2">First name</label>
+          <input id="n2" name="first_name" autocomplete="given-name" required>
+          <label for="m2">Mobile</label>
+          <input id="m2" name="mobile" type="tel" inputmode="tel" autocomplete="tel" placeholder="04xx xxx xxx" required>
+          <label for="s2">Suburb</label>
+          <input id="s2" name="suburb" autocomplete="address-level2" required>
+          <div class="hp" aria-hidden="true"><label>Leave blank<input name="company" tabindex="-1" autocomplete="off"></label></div>
+          <input type="hidden" name="source" value="modone-band">
+          <button class="btn" type="submit">Add me to the Priority List</button>
+          <p class="err" role="alert"></p>
+          <p class="fine">We'll only contact you about MOD One, and you can opt out any time.</p>
+        </div>
+        <div class="thanks" aria-live="polite">
+          <h3>Thanks<span class="who"></span>, you're on the list.</h3>
+          <p>We'll text you as soon as MOD One is live so you can get first pick of the calendar.</p>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="more">
+  <div class="wrap">
+    <div class="shead"><h2>More from getWrenly</h2></div>
+    <div class="more">
+      <a class="app" href="/apps/fixmate" style="--c:#E07B39"><h3>FixMate</h3><p>Fix it yourself, even if you've never held a spanner.</p><span class="go">See FixMate</span></a>
+      <a class="app" href="/apps/landscape-mate" style="--c:#1E9E8A"><h3>Landscape Mate</h3><p>The whole landscape job, first site visit to handover.</p><span class="go">See Landscape Mate</span></a>
+      <a class="app" href="/apps/flowart" style="--c:#22A7CE"><h3>FlowArt</h3><p>Irrigation from flow test to final quote.</p><span class="go">See FlowArt</span></a>
+    </div>
+    <a class="all" href="/">See all sixteen getWrenly apps</a>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>getWrenly — a SCHOFOX Pty Ltd studio. New South Wales, Australia.</span>
+    <span><a href="mailto:hello@getwrenly.app">hello@getwrenly.app</a> &nbsp; <a href="/">All apps</a></span>
+  </div>
+</footer>
+
+<script>
+/* Sign-ups go to the Cloudflare Pages Function in functions/api/modone-signup.js */
+const FORM_ENDPOINT = "/api/modone-signup";
+
+document.querySelectorAll("form.signup").forEach(form => {
+  form.addEventListener("submit", async e => {
+    e.preventDefault();
+    const err = form.querySelector(".err");
+    const btn = form.querySelector(".btn");
+    err.style.display = "none";
+    const data = Object.fromEntries(new FormData(form));
+    if (data.company) return; // bot trap
+    const mobile = (data.mobile || "").replace(/[^\d+]/g, "");
+    if (!data.first_name.trim() || !data.suburb.trim()) {
+      err.textContent = "Please add your first name and suburb."; err.style.display = "block"; return;
+    }
+    if (!/^(\+?61|0)4\d{8}$/.test(mobile)) {
+      err.textContent = "Please enter an Australian mobile number."; err.style.display = "block"; return;
+    }
+    btn.disabled = true; btn.textContent = "Adding you…";
+    try {
+      const res = await fetch(FORM_ENDPOINT, {
+        method: "POST",
+        headers: {"Content-Type": "application/json", "Accept": "application/json"},
+        body: JSON.stringify({first_name: data.first_name.trim(), mobile, suburb: data.suburb.trim(), source: data.source, submitted_at: new Date().toISOString()})
+      });
+      if (!res.ok) throw new Error(res.status);
+      form.querySelector(".who").textContent = ", " + data.first_name.trim();
+      form.classList.add("done");
+    } catch (_) {
+      err.textContent = "That didn't go through. Please try again, or email hello@getwrenly.app.";
+      err.style.display = "block";
+      btn.disabled = false; btn.textContent = "Add me to the Priority List";
+    }
+  });
+});
+</script>
+</body>
+</html>
